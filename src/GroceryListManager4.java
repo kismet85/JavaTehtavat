@@ -14,7 +14,6 @@ public class GroceryListManager4 {
     public static void main(String[] args) {
 
         StartChoices();
-
     }
 
     private static void StartChoices() {
