@@ -232,10 +232,15 @@ public class GroceryListManager4 {
     }
     public static void displayList()
     {
+        int quantity = 0;
         for (Map.Entry<String, Double> entry : groceryList.entrySet()) {
             String name = entry.getKey();
             double price = entry.getValue();
-            System.out.println("Item: " + name + ", price: " + price);
+
+            if (itemQuantities.containsKey(name)) {
+                quantity = itemQuantities.get(name);
+            }
+            System.out.println("Item: " + name + ", price: " + price + ", Quantity: " + quantity);
         }
     }
 
@@ -275,10 +280,17 @@ public class GroceryListManager4 {
     public static double calculateTotalCost()
     {
         double totalPrice = 0.00;
+
         for (Map.Entry<String, Double> entry : groceryList.entrySet()) {
+            String currentItem = entry.getKey();
             double price = entry.getValue();
-            totalPrice += price;
+
+            if (itemQuantities.containsKey(currentItem)) {
+                int quantity = itemQuantities.get(currentItem);
+                totalPrice += price * quantity;
+            }
         }
+
         return totalPrice;
     }
     public static void addItemWithQuantity(String item, int quantity) {
