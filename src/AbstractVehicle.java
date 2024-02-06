@@ -1,4 +1,4 @@
-abstract class AbstractVehicle implements Vehicle {
+abstract class AbstractVehicle implements Vehicle, ElectricVehicle{
     private String fuelType;
     private String type;
     public AbstractVehicle(String fuelType, String type) {
@@ -13,5 +13,6 @@ abstract class AbstractVehicle implements Vehicle {
     public String getType() {
         return type;
     }
+
 
 }

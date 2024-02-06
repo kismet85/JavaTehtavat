@@ -12,6 +12,7 @@ public class VehicleMain {
         Vehicle tesla = new ElectricCar("Electric", "Car", "Silver");
         Vehicle electrobike = new ElectricMotorcycle("Electric", "Motorcycle", "White");
 
+
         car.start();
         car.stop();
         car.getInfo();
