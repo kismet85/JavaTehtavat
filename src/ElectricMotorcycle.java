@@ -5,6 +5,7 @@ public class ElectricMotorcycle extends AbstractVehicle{
         this.color = color;
 
     }
+
     @Override
     public void charge() {
         System.out.println("Charging electric motorcycle...");

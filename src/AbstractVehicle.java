@@ -14,5 +14,4 @@ abstract class AbstractVehicle implements Vehicle, ElectricVehicle{
         return type;
     }
 
-
 }
