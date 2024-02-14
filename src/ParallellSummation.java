@@ -15,12 +15,10 @@ public class ParallelSummation {
             threads[i].start();
         }
 
-        // Wait for all threads to finish
         for (Thread thread : threads) {
             thread.join();
         }
 
-        // Calculate total sum
         long totalSum = 0;
         for (SumCalculator calculator : calculators) {
             totalSum += calculator.getSum();
